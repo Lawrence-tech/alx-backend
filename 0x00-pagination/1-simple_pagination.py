@@ -3,8 +3,7 @@
 Module index_range that takes two integer arguments page and page_size
 """
 import csv
-import math
-from typing import Tuple
+from typing import Tuple, List
 
 
 class Server:
