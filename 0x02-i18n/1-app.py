@@ -19,12 +19,11 @@ class Config:
 
 app.config.from_object(Config)
 
-
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def index():
     """Render the index.html template."""
     return render_template('0-index.html')
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5000)
