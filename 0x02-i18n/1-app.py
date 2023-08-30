@@ -12,12 +12,16 @@ babel = Babel(app)
 
 
 class Config:
+    """
+    the config class that has a LANGUAGES class attribute equal to en/fr
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = 'en'
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
 app.config.from_object(Config)
+
 
 @app.route('/', strict_slashes=False)
 def index():
